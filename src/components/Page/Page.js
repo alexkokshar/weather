@@ -3,6 +3,7 @@ import React, { useEffect } from 'react';
 import MyCities from '../MyCities/MyCities';
 import Form from '../Form/Form';
 import Error from '../Error/Error';
+import Loading from '../Loading/Loading';
 import CurrentDay from '../CurrentDay/CurrentDay';
 import CurrentDayDetails from '../CurrentDayDetails/CurrentDayDetails';
 
@@ -29,9 +30,8 @@ const Page = () => {
           <div className={styles.logo}>the.weather</div>
           {!forecast && (
             <div>
-              {!isLoading && <div>Not loading</div>}
               {isError && <Error message="There is no such location" />}
-              {isLoading && <div>Loading</div>}
+              {isLoading && <Loading />}
             </div>
           )}
           {forecast && <CurrentDay forecast={forecast} />}
