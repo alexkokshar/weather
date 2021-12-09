@@ -14,11 +14,15 @@ import Form from '../Form/Form';
 // import Snowy from '../../assets/weather/snowy.svg';
 import Thunder from '../../assets/weather/thunder.svg';
 
+import useForecast from '../../hooks/useForecast';
+
 import styles from './Page.module.css';
 
 const Page = () => {
+  const { isError, isLoading, forecast, submitRequest } = useForecast();
+
   const onSubmit = (location) => {
-    console.log(location);
+    submitRequest(location);
   };
 
   return (
