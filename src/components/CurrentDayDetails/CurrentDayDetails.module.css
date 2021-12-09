@@ -1,0 +1,18 @@
+.details {
+  margin-right: 40px;
+}
+.detailsTitle {
+  margin: 30px 0;
+  color: #fff;
+}
+.paramsList {
+}
+.param {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+.paramName {
+}
+.paramValue {
+}

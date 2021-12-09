@@ -9,6 +9,7 @@ const Form = ({ searchCity }) => {
     e.preventDefault();
     if (!location || location === '') return;
     searchCity(location);
+    setLocation('');
   };
 
   return (

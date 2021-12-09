@@ -2,7 +2,7 @@ import React from 'react';
 
 import styles from './Loader.module.css';
 
-const Loaders = () => (
+const Loader = () => (
   <div className={styles.loader}>
     <svg width="57" height="57" viewBox="0 0 57 57" xmlns="http://www.w3.org/2000/svg" stroke="red">
       <g fill="none" fill-rule="evenodd">
@@ -73,4 +73,4 @@ const Loaders = () => (
   </div>
 );
 
-export default Loaders;
+export default Loader;

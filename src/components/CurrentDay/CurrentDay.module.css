@@ -1,0 +1,37 @@
+.result {
+  display: flex;
+  align-items: flex-end;
+}
+.temp {
+  font-size: 120px;
+  line-height: 0.75;
+  margin-right: 10px;
+  display: flex;
+}
+.temp span {
+  font-size: 60px;
+}
+.townInfo {
+  margin-right: 25px;
+}
+.townName {
+  font-size: 60px;
+  margin-left: -5px;
+}
+.townParams {
+  display: flex;
+}
+.townTime {
+  margin-right: 5px;
+}
+.townDate {
+}
+.condition {
+}
+.conditionIcon {
+  width: 90px;
+  height: 90px;
+}
+.conditionStatus {
+  text-align: center;
+}
