@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 import MyCities from '../MyCities/MyCities';
 import Form from '../Form/Form';
@@ -13,9 +13,13 @@ import styles from './Page.module.css';
 const Page = () => {
   const { isError, isLoading, forecast, submitRequest } = useForecast();
 
-  const onSubmit = (location) => {
+  const onSubmit = (location = 'London') => {
     submitRequest(location);
   };
+
+  useEffect(() => {
+    onSubmit();
+  }, []);
 
   return (
     <div>
