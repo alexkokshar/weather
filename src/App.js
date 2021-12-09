@@ -1,7 +1,13 @@
 import React from 'react';
 
+import Page from './components/Page/Page';
+
 function App() {
-  return <div>Hello</div>;
+  return (
+    <div>
+      <Page />
+    </div>
+  );
 }
 
 export default App;
