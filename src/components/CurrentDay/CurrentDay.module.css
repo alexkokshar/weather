@@ -21,6 +21,11 @@
 .townParams {
   display: flex;
 }
+.townTime,
+.townDate,
+.conditionStatus {
+  font-size: 20px;
+}
 .townTime {
   margin-right: 5px;
 }

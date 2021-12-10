@@ -1,6 +1,6 @@
 import React from 'react';
 
-import getCurrentWeatherIcon from '../../helpers/getCurrentWeatherIcon';
+import { getCurrentWeatherIcon } from '../../helpers/getCurrentWeatherParams';
 
 import styles from './CurrentDay.module.css';
 

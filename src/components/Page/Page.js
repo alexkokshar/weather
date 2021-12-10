@@ -7,9 +7,10 @@ import Loading from '../Loading/Loading';
 import CurrentDay from '../CurrentDay/CurrentDay';
 import CurrentDayDetails from '../CurrentDayDetails/CurrentDayDetails';
 
+import { getCurrentWeatherType } from '../../helpers/getCurrentWeatherParams';
 import useForecast from '../../hooks/useForecast';
 
-import styles from './Page.module.css';
+import './Page.css';
 
 const Page = () => {
   const { isError, isLoading, forecast, submitRequest } = useForecast();
@@ -22,12 +23,20 @@ const Page = () => {
     onSubmit();
   }, []);
 
+  const setWeatherType = () => {
+    let weatherType;
+    if (forecast) {
+      weatherType = getCurrentWeatherType(forecast);
+    }
+    return weatherType;
+  };
+
   return (
     <div>
       <MyCities />
-      <main className={styles.main}>
-        <div className={styles.mainInfo}>
-          <div className={styles.logo}>the.weather</div>
+      <main className={`main ${setWeatherType()}`}>
+        <div className="main-info">
+          <div className="logo">the.weather</div>
           {!forecast && (
             <div>
               {isError && <Error message="There is no such location" />}
@@ -36,7 +45,7 @@ const Page = () => {
           )}
           {forecast && <CurrentDay forecast={forecast} />}
         </div>
-        <div className={styles.sidebar}>
+        <div className="sidebar">
           <Form searchCity={onSubmit} />
           <CurrentDayDetails />
         </div>

@@ -1,0 +1,89 @@
+.main {
+  background-image: url(../../assets/backgrounds/surset-cloudy.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 80vh;
+
+  display: flex;
+  justify-content: space-between;
+
+  box-shadow: inset 0 -10em 10em rgba(0, 0, 0, 0.3);
+}
+
+.main.clear-day {
+  background-image: url(../../assets/backgrounds/clear-day.jpg);
+}
+.main.small-clouds-day {
+  background-image: url(../../assets/backgrounds/small-clouds-day.jpg);
+}
+.main.big-clouds-day {
+  background-image: url(../../assets/backgrounds/big-clouds-day.jpg);
+}
+.main.thunderstorm-day {
+  background-image: url(../../assets/backgrounds/thunderstorm-day.jpg);
+}
+.main.drizzle-day {
+  background-image: url(../../assets/backgrounds/drizzle-day.jpg);
+}
+.main.rain-day {
+  background-image: url(../../assets/backgrounds/rain-day.jpg);
+}
+.main.snow-day {
+  background-image: url(../../assets/backgrounds/snow-day.jpg);
+}
+.main.mist-day {
+  background-image: url(../../assets/backgrounds/mist-day.jpg);
+}
+.main.dust-day {
+  background-image: url(../../assets/backgrounds/dust-day.jpg);
+}
+.main.squall-day {
+  background-image: url(../../assets/backgrounds/squall-day.jpg);
+}
+
+/*Night*/
+
+.main.clear-night {
+  background-image: url(../../assets/backgrounds/clear-night.jpg);
+}
+.main.small-clouds-night {
+  background-image: url(../../assets/backgrounds/small-clouds-night.jpg);
+}
+.main.big-clouds-night {
+  background-image: url(../../assets/backgrounds/big-clouds-night.jpg);
+}
+.main.thunderstorm-night {
+  background-image: url(../../assets/backgrounds/thunderstorm-night.jpg);
+}
+.main.drizzle-night {
+  background-image: url(../../assets/backgrounds/drizzle-night.jpg);
+}
+.main.rain-night {
+  background-image: url(../../assets/backgrounds/rain-night.jpg);
+}
+.main.snow-night {
+  background-image: url(../../assets/backgrounds/snow-night.jpg);
+}
+.main.mist-night {
+  background-image: url(../../assets/backgrounds/mist-night.jpg);
+}
+
+.main-info {
+  padding: 30px 20px 100px 100px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.logo {
+  font-weight: 600;
+}
+
+.sidebar {
+  width: 30vw;
+  -webkit-backdrop-filter: blur(30px);
+  backdrop-filter: blur(30px);
+  padding-left: 40px;
+  color: #ccc;
+}
