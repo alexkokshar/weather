@@ -1,43 +1,27 @@
-const getDate = (date) => {
-  const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-  const months = [
-    'Jan',
-    'Feb',
-    'Mar',
-    'Apr',
-    'May',
-    'Jun',
-    'Jul',
-    'Aug',
-    'Sep',
-    'Oct',
-    'Nov',
-    'Dec',
-  ];
+const getDate = (timezone) => {
+  const currentUserTimestamp = +new Date();
+  const currentUTCTimestamp = currentUserTimestamp + new Date().getTimezoneOffset() * 60 * 1000;
+  const currentLocationDate = String(new Date(currentUTCTimestamp + timezone * 1000));
 
-  const currentDate = new Date();
+  const time = currentLocationDate.split(' ')[4].slice(0, 5);
+  const dayOfWeek = currentLocationDate.split(' ')[0];
+  const day = currentLocationDate.split(' ')[2];
+  const month = currentLocationDate.split(' ')[1];
+  const year = currentLocationDate.split(' ')[3];
 
-  const dayOfWeek = days[currentDate.getDay()];
-  const day = currentDate.getDate();
-  const month = months[currentDate.getMonth()];
-  const year = currentDate.getFullYear();
-  const dateNow = `${dayOfWeek}, ${day} ${month} ${year}`;
-
-  const hour = date.split('T')[1].slice(0, 2);
-  const minutes = date.split('T')[1].slice(3, 5);
+  const date = `${dayOfWeek}, ${day} ${month} ${year}`;
 
   return {
-    dateNow,
-    hour,
-    minutes,
+    time,
+    date,
   };
 };
 
 const getCurrentDayForecast = (data) => {
-  const temp = Math.round(data.consolidated_weather[0].the_temp);
-  const cityName = data.title;
-  const conditions = data.consolidated_weather[0].weather_state_name;
-  const date = getDate(data.time);
+  const temp = Math.round(data.main.temp);
+  const cityName = data.name;
+  const conditions = data.weather[0].main;
+  const date = getDate(data.timezone);
 
   return {
     temp,

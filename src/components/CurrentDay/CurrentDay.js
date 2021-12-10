@@ -25,10 +25,8 @@ const CurrentDay = ({ forecast }) => {
       <div className={styles.townInfo}>
         <h1 className={styles.townName}>{cityName}</h1>
         <div className={styles.townParams}>
-          <div className={styles.townTime}>
-            {date.hour}:{date.minutes} -{' '}
-          </div>
-          <div className={styles.townDate}>{date.dateNow}</div>
+          <div className={styles.townTime}>{date.time} - </div>
+          <div className={styles.townDate}>{date.date}</div>
         </div>
       </div>
       <div className={styles.condition}>
