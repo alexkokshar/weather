@@ -1,3 +1,5 @@
+import getLocationTime from './getLocationTime';
+
 const getDate = (timezone) => {
   const currentUserTimestamp = +new Date();
   const currentUTCTimestamp = currentUserTimestamp + new Date().getTimezoneOffset() * 60 * 1000;
@@ -20,14 +22,22 @@ const getDate = (timezone) => {
 const getCurrentDayForecast = (data) => {
   const temp = Math.round(data.main.temp);
   const cityName = data.name;
-  const conditions = data.weather[0].main;
   const date = getDate(data.timezone);
+  const conditions = {
+    status: data.weather[0].main,
+    description: data.weather[0].description,
+  };
+  const dayLength = {
+    sunrise: getLocationTime(data.sys.sunrise, data.timezone),
+    sunset: getLocationTime(data.sys.sunset, data.timezone),
+  };
 
   return {
     temp,
     cityName,
-    conditions,
     date,
+    conditions,
+    dayLength,
   };
 };
 

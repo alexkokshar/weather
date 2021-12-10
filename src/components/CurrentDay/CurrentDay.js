@@ -1,20 +1,15 @@
 import React from 'react';
 
-// import Sun from '../../assets/weather/sun.svg';
-// import CloudyMoon from '../../assets/weather/cloudy-moon.svg';
-// import CloudySun from '../../assets/weather/cloudy-sun.svg';
-// import Cloudy from '../../assets/weather/cloudy.svg';
-// import Moon from '../../assets/weather/moon.svg';
-// import RainySun from '../../assets/weather/rainy-sun.svg';
-// import Rainy from '../../assets/weather/rainy.svg';
-// import SnowySun from '../../assets/weather/snowy-sun.svg';
-// import Snowy from '../../assets/weather/snowy.svg';
-import Thunder from '../../assets/weather/thunder.svg';
+import getCurrentWeatherIcon from '../../helpers/getCurrentWeatherIcon';
 
 import styles from './CurrentDay.module.css';
 
 const CurrentDay = ({ forecast }) => {
-  const { temp, cityName, conditions, date } = forecast.currentDay;
+  const { temp, cityName, date, conditions, dayLength } = forecast.currentDay;
+
+  const showIcon = () => {
+    return getCurrentWeatherIcon(conditions, date.time, dayLength);
+  };
 
   return (
     <div className={styles.result}>
@@ -30,8 +25,8 @@ const CurrentDay = ({ forecast }) => {
         </div>
       </div>
       <div className={styles.condition}>
-        <img className={styles.conditionIcon} src={Thunder} alt="weather icon"></img>
-        <div className={styles.conditionStatus}>{conditions}</div>
+        <img className={styles.conditionIcon} src={showIcon()} alt="weather icon"></img>
+        <div className={styles.conditionStatus}>{conditions.status}</div>
       </div>
     </div>
   );
