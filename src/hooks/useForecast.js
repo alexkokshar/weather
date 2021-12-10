@@ -1,6 +1,7 @@
 import { useState } from 'react';
 
 import getCurrentDayForecast from '../helpers/getCurrentDayForecast';
+import getCurrentDayDetailForecast from '../helpers/getCurrentDayDetailForecast';
 
 const api = {
   key: '06cda364b2f9d700d2754740d3395312',
@@ -14,7 +15,8 @@ const useForecast = () => {
 
   const gatherForecastData = (data) => {
     const currentDay = getCurrentDayForecast(data);
-    setForecast({ currentDay });
+    const currentDetailDay = getCurrentDayDetailForecast(data);
+    setForecast({ currentDay, currentDetailDay });
 
     setIsLoading(false);
   };

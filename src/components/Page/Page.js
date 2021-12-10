@@ -47,7 +47,7 @@ const Page = () => {
         </div>
         <div className="sidebar">
           <Form searchCity={onSubmit} />
-          <CurrentDayDetails />
+          {forecast && <CurrentDayDetails forecast={forecast} />}
         </div>
       </main>
     </div>
