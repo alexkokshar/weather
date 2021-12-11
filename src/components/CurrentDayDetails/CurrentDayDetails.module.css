@@ -1,11 +1,23 @@
 .details {
   margin-right: 40px;
+  max-height: 70%;
+  overflow-y: auto;
+}
+.details::-webkit-scrollbar {
+  width: 8px;
+  border-radius: 4px;
+}
+.details::-webkit-scrollbar-thumb {
+  width: 8px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
 }
 .detailsTitle {
   margin: 30px 0;
   color: #fff;
 }
 .paramsList {
+  margin-right: 5px;
 }
 .param {
   display: flex;

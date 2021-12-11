@@ -5,6 +5,8 @@
   background-position: center;
   height: 80vh;
 
+  overflow: hidden;
+
   display: flex;
   justify-content: space-between;
 
