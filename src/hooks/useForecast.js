@@ -35,6 +35,10 @@ const useForecast = () => {
       return;
     }
 
+    if (data.name) {
+      localStorage.setItem('location', data.name);
+    }
+
     console.log(data);
     gatherForecastData(data);
   };

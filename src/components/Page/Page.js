@@ -15,7 +15,10 @@ import './Page.css';
 const Page = () => {
   const { isError, isLoading, forecast, submitRequest } = useForecast();
 
-  const onSubmit = (location = 'London') => {
+  const onSubmit = (location) => {
+    if (!location) {
+      location = localStorage.getItem('location') || 'London';
+    }
     submitRequest(location);
   };
 
