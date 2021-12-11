@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  margin-bottom: 30px;
+  margin-bottom: 60px;
 }
 .search {
   flex-grow: 1;
@@ -19,7 +19,7 @@
 }
 
 .input:focus {
-  border-bottom: 1px solid #fff;
+  border-bottom: 1px solid #d66c05;
 }
 
 .input::-webkit-input-placeholder {
@@ -61,6 +61,11 @@
   width: 70px;
   height: 70px;
   background-color: #d66c05;
+  transition: all 0.3s ease;
+}
+
+.submitBtn:hover {
+  background-color: orange;
 }
 
 .submitBtn svg {
