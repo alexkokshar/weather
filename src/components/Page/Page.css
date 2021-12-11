@@ -1,73 +1,78 @@
-.main {
+.background {
   background-image: url(../../assets/backgrounds/surset-cloudy.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  /* box-shadow: inset 0 -10em 10em rgba(0, 0, 0, 0.3); */
+  box-shadow: inset 0 10em 10em rgba(0, 0, 0, 0.4);
+}
+
+.main {
   height: 80vh;
 
   overflow: hidden;
 
   display: flex;
   justify-content: space-between;
-
-  box-shadow: inset 0 -10em 10em rgba(0, 0, 0, 0.3);
 }
 
-.main.clear-day {
+/* Day bachgroungs */
+
+.background.clear-day {
   background-image: url(../../assets/backgrounds/clear-day.jpg);
 }
-.main.small-clouds-day {
+.background.small-clouds-day {
   background-image: url(../../assets/backgrounds/small-clouds-day.jpg);
 }
-.main.big-clouds-day {
+.background.big-clouds-day {
   background-image: url(../../assets/backgrounds/big-clouds-day.jpg);
 }
-.main.thunderstorm-day {
+.background.thunderstorm-day {
   background-image: url(../../assets/backgrounds/thunderstorm-day.jpg);
 }
-.main.drizzle-day {
+.background.drizzle-day {
   background-image: url(../../assets/backgrounds/drizzle-day.jpg);
 }
-.main.rain-day {
+.background.rain-day {
   background-image: url(../../assets/backgrounds/rain-day.jpg);
 }
-.main.snow-day {
+.background.snow-day {
   background-image: url(../../assets/backgrounds/snow-day.jpg);
 }
-.main.mist-day {
+.background.mist-day {
   background-image: url(../../assets/backgrounds/mist-day.jpg);
 }
-.main.dust-day {
+.background.dust-day {
   background-image: url(../../assets/backgrounds/dust-day.jpg);
 }
-.main.squall-day {
+.background.squall-day {
   background-image: url(../../assets/backgrounds/squall-day.jpg);
 }
 
-/*Night*/
+/*Night backgrounds*/
 
-.main.clear-night {
+.background.clear-night {
   background-image: url(../../assets/backgrounds/clear-night.jpg);
 }
-.main.small-clouds-night {
+.background.small-clouds-night {
   background-image: url(../../assets/backgrounds/small-clouds-night.jpg);
 }
-.main.big-clouds-night {
+.background.big-clouds-night {
   background-image: url(../../assets/backgrounds/big-clouds-night.jpg);
 }
-.main.thunderstorm-night {
+.background.thunderstorm-night {
   background-image: url(../../assets/backgrounds/thunderstorm-night.jpg);
 }
-.main.drizzle-night {
+.background.drizzle-night {
   background-image: url(../../assets/backgrounds/drizzle-night.jpg);
 }
-.main.rain-night {
+.background.rain-night {
   background-image: url(../../assets/backgrounds/rain-night.jpg);
 }
-.main.snow-night {
+.background.snow-night {
   background-image: url(../../assets/backgrounds/snow-night.jpg);
 }
-.main.mist-night {
+.background.mist-night {
   background-image: url(../../assets/backgrounds/mist-night.jpg);
 }
 

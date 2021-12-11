@@ -20,6 +20,7 @@ const getDate = (timezone) => {
 };
 
 const getCurrentDayForecast = (data) => {
+  const id = Math.random();
   const temp = Math.round(data.main.temp);
   const cityName = data.name;
   const date = getDate(data.timezone);
@@ -33,6 +34,7 @@ const getCurrentDayForecast = (data) => {
   };
 
   return {
+    id,
     temp,
     cityName,
     date,

@@ -35,9 +35,9 @@ const Page = () => {
   };
 
   return (
-    <div>
+    <div className={`background ${setWeatherType()}`}>
       <MyCities />
-      <main className={`main ${setWeatherType()}`}>
+      <main className="main">
         <div className="main-info">
           <div className="logo">the.weather</div>
           {!forecast && (
