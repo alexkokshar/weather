@@ -14,11 +14,11 @@ const api = {
   base: 'https://api.openweathermap.org/data/2.5/',
 };
 
-const MyCities = () => {
-  const [cityNames, setCityNames] = useState(['Boston', 'London', 'Paris', 'New York', 'Tokyo']);
+const MyCities = ({ cityNames }) => {
   const [citiesList, setCitiesList] = useState([]);
 
   useEffect(() => {
+    setCitiesList([]);
     cityNames.forEach((city) => {
       fetch(`${api.base}weather?q=${city}&units=metric&APPID=${api.key}`)
         .then((res) => res.json())
