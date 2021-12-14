@@ -31,8 +31,8 @@ const useForecast = () => {
       .then((res) => res.json())
       .then((result) => result);
 
-    if (!data || data.length === 0) {
-      setIsError('There is no such location');
+    if (!data || data.length === 0 || !data.name) {
+      setIsError('There is no such location!');
       setIsLoading(false);
       return;
     }

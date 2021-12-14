@@ -80,6 +80,7 @@ const Page = () => {
             </div>
             <div className="sidebar">
               <Form searchCity={onSubmit} />
+              {isError && <Error message={isError} />}
               <CurrentDayDetails forecast={forecast} />
             </div>
           </main>
