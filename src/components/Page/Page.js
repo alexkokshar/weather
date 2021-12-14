@@ -68,28 +68,23 @@ const Page = () => {
   };
 
   return (
-    <div className={`background ${setWeatherType()}`}>
-      {forecast && <MyCities cityNames={cityNames} />}
-      <main className="main">
-        <div className="main-info">
-          <div>
-            {forecast && (
+    <div>
+      {isLoading && <Loading />}
+      {forecast && (
+        <div className={`background ${setWeatherType()}`}>
+          <MyCities cityNames={cityNames} />
+          <main className="main">
+            <div className="main-info">
               <StarCheckbox check={isCheckedCurrentCity()} setCheckedCity={setCheckedCity} />
-            )}
-          </div>
-          {!forecast && (
-            <div>
-              {isError && <Error message="There is no such location" />}
-              {isLoading && <Loading />}
+              <CurrentDay forecast={forecast} />
             </div>
-          )}
-          {forecast && <CurrentDay forecast={forecast} />}
+            <div className="sidebar">
+              <Form searchCity={onSubmit} />
+              <CurrentDayDetails forecast={forecast} />
+            </div>
+          </main>
         </div>
-        <div className="sidebar">
-          <Form searchCity={onSubmit} />
-          {forecast && <CurrentDayDetails forecast={forecast} />}
-        </div>
-      </main>
+      )}
     </div>
   );
 };

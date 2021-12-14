@@ -18,7 +18,9 @@ const useForecast = () => {
     const currentDetailDay = getCurrentDayDetailForecast(data);
     setForecast({ currentDay, currentDetailDay });
 
-    setIsLoading(false);
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 500);
   };
 
   const submitRequest = async (location) => {
@@ -39,7 +41,6 @@ const useForecast = () => {
       localStorage.setItem('location', data.name);
     }
 
-    console.log(data);
     gatherForecastData(data);
   };
 
