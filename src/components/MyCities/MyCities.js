@@ -33,12 +33,23 @@ const MyCities = ({ cityNames }) => {
     <div className={styles.myCities}>
       <Swiper
         modules={[Navigation, Mousewheel]}
-        slidesPerView={5}
         navigation={true}
         mousewheel={true}
         loop={true}
-        // onSlideChange={() => console.log('slide change')}
-        // onSwiper={(swiper) => console.log(swiper)}
+        breakpoints={{
+          520: {
+            slidesPerView: 2,
+          },
+          740: {
+            slidesPerView: 3,
+          },
+          1000: {
+            slidesPerView: 4,
+          },
+          1280: {
+            slidesPerView: 5,
+          },
+        }}
       >
         {citiesList.map((city) => (
           <SwiperSlide key={city.id}>

@@ -31,12 +31,57 @@
 }
 .townDate {
 }
-.condition {
-}
 .conditionIcon {
   width: 90px;
   height: 90px;
 }
 .conditionStatus {
   text-align: center;
+}
+
+@media (max-width: 1090px) {
+  .result {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 780px) {
+  .temp {
+    font-size: 85px;
+  }
+  .townName {
+    font-size: 45px;
+    margin-left: 0;
+  }
+  .townTime,
+  .townDate,
+  .conditionStatus {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 670px) {
+  .result {
+    flex: 1;
+    align-items: center;
+    text-shadow: 0 0 4px #000;
+  }
+  .townInfo {
+    margin-right: 0;
+  }
+  .townParams {
+    justify-content: center;
+  }
+  .temp {
+    margin-right: 0;
+  }
+  .townName {
+    text-align: center;
+  }
+  .townTime,
+  .townDate,
+  .conditionStatus {
+    font-size: 18px;
+  }
 }

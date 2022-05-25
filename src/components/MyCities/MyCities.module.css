@@ -4,3 +4,9 @@
   justify-content: center;
   align-items: center;
 }
+
+@media (max-width: 670px) {
+  .myCities {
+    min-height: 14vh;
+  }
+}

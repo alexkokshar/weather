@@ -6,12 +6,11 @@
   left: 0;
   top: 0;
 
+  z-index: 100;
+
   display: flex;
   justify-content: center;
   align-items: center;
 
   background-color: rgba(0, 0, 0, 0.7);
-}
-
-.loader {
 }

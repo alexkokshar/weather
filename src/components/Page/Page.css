@@ -7,14 +7,12 @@
 
 .main {
   height: 80vh;
-
   overflow: hidden;
-
   display: flex;
   justify-content: space-between;
 }
 
-/* Day bachgroungs */
+/* Day backgroungs */
 
 .background.clear-day {
   background-image: url(../../assets/backgrounds/clear-day.jpg);
@@ -86,9 +84,36 @@
 }
 
 .sidebar {
-  width: 30vw;
+  max-width: 480px;
   -webkit-backdrop-filter: blur(30px);
   backdrop-filter: blur(30px);
   padding-left: 40px;
   color: #ccc;
+}
+
+@media (max-width: 1090px) {
+  .main-info {
+    padding: 0 20px 100px;
+  }
+}
+
+@media (max-width: 670px) {
+  .main {
+    flex-direction: column;
+    height: 86vh;
+    overflow-y: auto;
+  }
+  .main-info {
+    justify-content: flex-start;
+    padding: 0 20px 20px;
+  }
+  .sidebar {
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 450px) {
+  .sidebar {
+    padding-left: 20px;
+  }
 }
