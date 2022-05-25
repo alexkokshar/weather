@@ -3,11 +3,7 @@ import React from 'react';
 import Page from './components/Page/Page';
 
 function App() {
-  return (
-    <div>
-      <Page />
-    </div>
-  );
+  return <Page />;
 }
 
 export default App;

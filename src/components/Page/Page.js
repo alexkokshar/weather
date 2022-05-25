@@ -68,7 +68,7 @@ const Page = () => {
   };
 
   return (
-    <div>
+    <>
       {isLoading && <Loading />}
       {forecast && (
         <div className={`background ${setWeatherType()}`}>
@@ -86,7 +86,7 @@ const Page = () => {
           </main>
         </div>
       )}
-    </div>
+    </>
   );
 };
 
